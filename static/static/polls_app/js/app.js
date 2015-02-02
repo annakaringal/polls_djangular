@@ -39,4 +39,9 @@ angular.module('pollsApp', [
                 templateUrl: '../../static/polls_app/views/users/create_user.tmpl.html',
                 controller: 'createUserCtrl'
             })
+            .state('updateUser', {
+                url: '/users/:id/update',
+                templateUrl: '../../static/polls_app/views/users/update_user.tmpl.html',
+                controller: 'updateUserCtrl'
+            })
     });

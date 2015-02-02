@@ -32,3 +32,12 @@ pollsControllers.controller('createUserCtrl', function createUserCtrl($scope, $s
         });
     }
 });
+pollsControllers.controller('updateUserCtrl', function updateUserCtrl($scope, $stateParams, $state, User) {
+    $scope.new_user = User.get({id:$stateParams.id});
+
+    $scope.updateUser = function(){
+        $scope.new_user.$update(function(){
+            $state.go('userListing');
+        });
+    }
+});
