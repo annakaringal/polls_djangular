@@ -1,0 +1,9 @@
+*.pyc
+.DS_Store
+.git
+.project
+.idea/**
+db.sqlite3
+*.sqlite3
+static-only/**/*
+bower_components/**
