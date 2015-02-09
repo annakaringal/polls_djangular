@@ -17,5 +17,14 @@ angular.module('pollsApp.services', ['ngResource'])
 
     })
     .factory('Polls', function($resource) {
-        return $resource('/api/polls/:id/');
+        return $resource('/api/polls/:id/',
+            {
+                id: "@id"
+            },
+            {
+                update: {
+                    method: "PUT"
+                }
+            }
+        );
     });

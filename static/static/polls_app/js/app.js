@@ -44,4 +44,18 @@ angular.module('pollsApp', [
                 templateUrl: '../../static/polls_app/views/users/update_user.tmpl.html',
                 controller: 'updateUserCtrl'
             })
+            .state('createPoll', {
+                url: '/poll/create',
+                templateUrl: '../../static/polls_app/views/polls/create_poll.tmpl.html',
+                controller: 'createPollCtrl'
+            })
+            .state('updatePoll', {
+                url: '/poll/:id/update',
+                templateUrl: '../../static/polls_app/views/polls/update_poll.tmpl.html',
+                controller: 'updatePollCtrl'
+            })
+            .state('deletePoll', {
+                url: '/poll/:id/delete',
+                controller: 'deletePollCtrl'
+            })
     });

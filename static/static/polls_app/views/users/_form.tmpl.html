@@ -1,4 +1,25 @@
-<input type="text" data-ng-model="new_user.username"  placeholder="Username"/>
-<input type="email" data-ng-model="new_user.email"  placeholder="Email"/>
-
-<input type="submit" value="Save User" />
+<div class="row">
+    <input type="text" data-ng-model="new_user.username"  name="username" placeholder="Username" ng-maxlength="30" required/>
+    <span class="error" ng-show="userForm.username.$error.required">
+        *
+    </span>
+    <span class="error" ng-show="userForm.username.$error.maxlength">
+        Username shouldn't exceed to 30 characters.
+    </span>
+    <span class="error" ng-show="!available">
+        Username is taken.
+    </span>
+    
+</div>
+<div class="row">
+    <input type="email" data-ng-model="new_user.email" name="email" placeholder="Email" required />
+    <span class="error" ng-show="userForm.email.$error.required">
+        *
+    </span>
+    <span class="error" ng-show="userForm.email.$error.email">
+        Enter a valid email address
+    </span>
+</div>
+<div class="row">
+    <input type="submit" value="Save User" />
+</div>

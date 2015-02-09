@@ -1,8 +1,12 @@
 <h1>Home</h1>
 <a ui-sref="userListing">View Users</a>
+<a ui-sref="createPoll">New Poll</a>
 
 <ul>
     <li data-ng-repeat="poll in all_polls">
-        [[ poll.question ]]
+        <span>
+            <button  ng-click="deletePoll(poll.id)">Delete</button>
+            <a ui-sref="updatePoll({id: poll.id})">[[ poll.question ]]</a>
+        </span>
     </li>
 </ul>

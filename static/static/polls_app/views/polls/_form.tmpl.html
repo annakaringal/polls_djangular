@@ -1,0 +1,6 @@
+<textarea data-ng-model="new_poll.question" name="question" placeholder="Question" cols="50" rows="5" ng-maxlength="200" required></textarea>
+<div class="error" ng-show="pollForm.question.$error.maxlength">
+    Poll description shouldn't exceed to 200 characters.
+</div>
+<br>
+<button type="submit"> Save Poll</button>
